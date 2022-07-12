@@ -1,0 +1,15 @@
+
+[Unit]
+Description=Dmitri
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/python /opt/dmitri/bc_read.py
+WorkingDirectory=/opt/dmitri/
+StandardOutput=inherit
+StandardError=inherit
+Restart=always
+User=pi
+
+[Install]
+WantedBy=multi-user.target
